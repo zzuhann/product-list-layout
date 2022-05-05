@@ -1,0 +1,334 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    /* outline: solid 1px black; */
+    position: relative;
+    font-family: 'Noto Sans TC', sans-serif !important;
+    color: #3F5D45;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 42px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar li {
+    margin-left: 60px;
+}
+
+.navbar li:nth-child(4) {
+    margin-left: 79px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.head-logo {
+    height: 40px;
+}
+
+.navbar .cart {
+    width: 24px;
+    height: 24px;
+}
+
+.banner {
+    width: 100%;
+    padding-left: 42px;
+    padding-right: 42px;
+    margin-bottom: 60px;
+}
+
+.main {
+    padding-left: 42px;
+    padding-right: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    width: 33.3%;
+    font-weight: bold;
+    color: #3F5D45;
+}
+
+.list>li {
+    border: solid 1px #EAF0ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 64px;
+    font-size: 24px;
+}
+
+.head {
+    background-color: #3F5D45;
+    color: #EAF0ED;
+}
+
+.list .now {
+    background-color: #EAF0ED;
+}
+
+.card {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card>li {
+    width: 45%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.main-pic {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.badge {
+    position: absolute;
+    z-index: 1;
+    background-color: #3F5D45;
+    width: 36px;
+    margin-left: 20px;
+}
+
+.badge p {
+    color: #EAF0ED;
+    font-size: 16px;
+    writing-mode: vertical-lr;
+    letter-spacing: 3px;
+    margin: 10.08px 10px 9.24px 10px;
+}
+
+img.heart {
+    position: absolute;
+    width: 20px;
+    top: 19px;
+    right: 22px;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    /* margin-top: -3px; */
+    border: solid 1px #EAF0ED;
+    border-top: none;
+    border-bottom: none;
+}
+
+.content p {
+    /* width: 50%; */
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+p.title {
+    padding: 14px 33px;
+}
+
+p.price {
+    padding: 14px 20px 14px 25px;
+    font-weight: bold;
+    border-left: solid 1px #EAF0ED;
+}
+
+.add-cart {
+    width: 100%;
+    border: solid 1px #EAF0ED;
+    background-color: #EAF0ED;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+    padding: 16px 90px;
+    font-weight: bold;
+}
+
+.pages {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 42px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.page {
+    display: flex;
+}
+
+.page li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: solid 1px #EAF0ED;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
