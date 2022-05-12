@@ -147,7 +147,7 @@ table {
 
 .wrap {
     width: 100%;
-    max-width: 1024px;
+    max-width: 940px;
     margin: 0 auto;
 }
 
@@ -189,14 +189,10 @@ table {
 
 .banner {
     width: 100%;
-    padding-left: 42px;
-    padding-right: 42px;
     margin-bottom: 60px;
 }
 
 .main {
-    padding-left: 42px;
-    padding-right: 42px;
     display: flex;
     justify-content: space-between;
 }
@@ -207,6 +203,7 @@ table {
     color: #3F5D45;
 }
 
+h2.list,
 .list>li {
     border: solid 1px #EAF0ED;
     display: flex;
@@ -215,6 +212,7 @@ table {
     text-align: center;
     padding: 16px 64px;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .head {
@@ -230,13 +228,16 @@ table {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    width: 100%;
+    width: 66.6%;
+    /* 原先設定 width = 100% 但會吃掉左側 category 的寬度 故設成 66.6% */
 }
 
 .card>li {
     width: 45%;
     margin-left: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+
 }
 
 .main-pic {
@@ -265,7 +266,6 @@ img.heart {
     width: 20px;
     top: 19px;
     right: 22px;
-    cursor: pointer;
 }
 
 .content {
@@ -275,10 +275,6 @@ img.heart {
     border: solid 1px #EAF0ED;
     border-top: none;
     border-bottom: none;
-}
-
-.content p {
-    /* width: 50%; */
     font-size: 20px;
     line-height: 24px;
     display: flex;
@@ -287,14 +283,22 @@ img.heart {
     text-align: center;
 }
 
-p.title {
-    padding: 14px 33px;
+.title,
+.price {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
 }
 
-p.price {
-    padding: 14px 20px 14px 25px;
+.title {
+    width: 55%;
+    /* 沒有置中的感覺是因為 .content 你的寬度設為 100% ，但 .title 跟 .price 的寬度沒有占滿，可以在 p.title 將 width 設為 55% ， p.price 設為 45% ，這樣當產品文字變多時，價格也不會被擠壓到，或者是跑版 */
+}
+
+.price {
     font-weight: bold;
     border-left: solid 1px #EAF0ED;
+    width: 45%;
 }
 
 .add-cart {
@@ -304,8 +308,11 @@ p.price {
     font-size: 24px;
     line-height: 20px;
     text-align: center;
-    padding: 16px 90px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    /* 設計稿中的padding-left和right有時是說明text-align:center的意思，未必要完全照著設計稿來設定padding */
     font-weight: bold;
+    cursor: pointer;
 }
 
 .pages {
